@@ -1,0 +1,6 @@
+# Anomaly detection evaluation
+
+Precision is the fraction of alerts that are true anomalies: TP/(TP+FP).
+Recall is the fraction of actual anomalies detected: TP/(TP+FN).
+F1 is the harmonic mean of precision and recall. Choose thresholds using validation data, then report metrics on an untouched test set.
+Chronological splits help avoid training on future observations. Fit scaling only on training data.

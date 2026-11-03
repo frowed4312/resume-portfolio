@@ -1,0 +1,1 @@
+"""Bounded authorized asset inventory."""

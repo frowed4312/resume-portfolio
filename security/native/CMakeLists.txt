@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 3.16)
+project(tcp_probe C)
+add_executable(tcp-probe tcp_probe.c)
+set_target_properties(tcp-probe PROPERTIES C_STANDARD 99 C_STANDARD_REQUIRED YES)
+if(WIN32)
+    target_link_libraries(tcp-probe PRIVATE ws2_32)
+endif()

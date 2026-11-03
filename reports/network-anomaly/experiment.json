@@ -1,0 +1,39 @@
+{
+  "dataset": "KDD Cup 1999, 10% training corpus",
+  "source_url": "https://ndownloader.figshare.com/files/5976042",
+  "source_sha256": "8045aca0d84e70e622d1148d7df782496f6333bf6eb979a1b0837c42a9fd9561",
+  "citation": "https://doi.org/10.24432/C51C7N",
+  "license": "CC BY 4.0 per UCI",
+  "seed": 42,
+  "cleaning": {
+    "input_rows": 494021,
+    "unique_unambiguous_rows": 145582,
+    "conflicting_feature_groups_removed": 2,
+    "duplicate_or_conflicting_rows_removed": 348439
+  },
+  "split": "Stratified random split after feature deduplication; not chronological and not the official corrected test set.",
+  "split_rows": {
+    "train": 6000,
+    "validation": 2000,
+    "test": 3000
+  },
+  "normal_rows_used_for_fitting": 3620,
+  "preprocessed_features": 64,
+  "fit": "Log1p numeric features, StandardScaler and one-hot categories fitted only on normal training records.",
+  "selection": "Hyperparameters and threshold selected by validation F1; test labels used only for evaluation.",
+  "record_ids": "pandas hash_pandas_object of 41 typed features, index=False; 16-digit hex. Hash collisions would conservatively remove extra records.",
+  "environment": {
+    "python": "3.12.14",
+    "platform": "Windows-11-10.0.26200-SP0",
+    "numpy": "2.5.4",
+    "pandas": "3.1.0",
+    "scikit-learn": "1.9.1",
+    "torch": "2.14.1+cpu",
+    "matplotlib": "3.11.2"
+  },
+  "limitations": [
+    "1999 simulated military-network intrusions, not modern enterprise logs.",
+    "Subset results depend on sampling and the natural class balance after deduplication.",
+    "This experiment does not establish production detection rates."
+  ]
+}

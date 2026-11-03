@@ -1,0 +1,382 @@
+{
+  "status": "complete",
+  "profiles": [
+    {
+      "algorithm": "RSA-PSS-3072",
+      "family": "signature",
+      "nist_pqc_category": null,
+      "reference_problem": "RSA-3072 classical estimate",
+      "quantum_resistant": false,
+      "classical_reference_bits": 128,
+      "reference_note": "Coarse classical reference grouping, not an exact attack-cost estimate or equal quantum security."
+    },
+    {
+      "algorithm": "ECDSA-P256",
+      "family": "signature",
+      "nist_pqc_category": null,
+      "reference_problem": "P-256 classical estimate",
+      "quantum_resistant": false,
+      "classical_reference_bits": 128,
+      "reference_note": "Coarse classical reference grouping, not an exact attack-cost estimate or equal quantum security."
+    },
+    {
+      "algorithm": "ECDH-P256",
+      "family": "key agreement",
+      "nist_pqc_category": null,
+      "reference_problem": "P-256 classical estimate",
+      "quantum_resistant": false,
+      "classical_reference_bits": 128,
+      "reference_note": "Coarse classical reference grouping, not an exact attack-cost estimate or equal quantum security."
+    },
+    {
+      "algorithm": "ML-KEM-512",
+      "family": "KEM",
+      "nist_pqc_category": 1,
+      "reference_problem": "AES-128 key search",
+      "quantum_resistant": true,
+      "classical_reference_bits": 128,
+      "reference_note": "Coarse classical reference grouping, not an exact attack-cost estimate or equal quantum security."
+    },
+    {
+      "algorithm": "ML-DSA-44",
+      "family": "signature",
+      "nist_pqc_category": 2,
+      "reference_problem": "SHA-256 collision search",
+      "quantum_resistant": true,
+      "classical_reference_bits": 128,
+      "reference_note": "Coarse classical reference grouping, not an exact attack-cost estimate or equal quantum security."
+    },
+    {
+      "algorithm": "SLH_DSA_PURE_SHA2_128F",
+      "family": "signature",
+      "nist_pqc_category": 1,
+      "reference_problem": "AES-128 key search",
+      "quantum_resistant": true,
+      "classical_reference_bits": 128,
+      "reference_note": "Coarse classical reference grouping, not an exact attack-cost estimate or equal quantum security."
+    }
+  ],
+  "pairs": [
+    {
+      "classical": "RSA-PSS-3072",
+      "pqc": "ML-DSA-44",
+      "comparison_basis": "128-bit classical reference tier; distinct PQC categories retained",
+      "equivalent_quantum_security": false,
+      "operations": {
+        "keygen": {
+          "classical_us": 199998.5,
+          "pqc_us": 299.95000000000005,
+          "pqc_over_classical": 0.0014997612482093618
+        },
+        "sign": {
+          "classical_us": 3716.35,
+          "pqc_us": 573.25,
+          "pqc_over_classical": 0.1542508106071818
+        },
+        "verify": {
+          "classical_us": 149.0,
+          "pqc_us": 107.55,
+          "pqc_over_classical": 0.7218120805369127
+        }
+      }
+    },
+    {
+      "classical": "RSA-PSS-3072",
+      "pqc": "SLH_DSA_PURE_SHA2_128F",
+      "comparison_basis": "128-bit classical reference tier; distinct PQC categories retained",
+      "equivalent_quantum_security": false,
+      "operations": {
+        "keygen": {
+          "classical_us": 199998.5,
+          "pqc_us": 1515.2,
+          "pqc_over_classical": 0.0075760568204261535
+        },
+        "sign": {
+          "classical_us": 3716.35,
+          "pqc_us": 29467.85,
+          "pqc_over_classical": 7.92924509263121
+        },
+        "verify": {
+          "classical_us": 149.0,
+          "pqc_us": 1704.85,
+          "pqc_over_classical": 11.441946308724832
+        }
+      }
+    },
+    {
+      "classical": "ECDSA-P256",
+      "pqc": "ML-DSA-44",
+      "comparison_basis": "128-bit classical reference tier; distinct PQC categories retained",
+      "equivalent_quantum_security": false,
+      "operations": {
+        "keygen": {
+          "classical_us": 25.549999999999997,
+          "pqc_us": 299.95000000000005,
+          "pqc_over_classical": 11.739726027397264
+        },
+        "sign": {
+          "classical_us": 44.65,
+          "pqc_us": 573.25,
+          "pqc_over_classical": 12.838745800671893
+        },
+        "verify": {
+          "classical_us": 93.0,
+          "pqc_us": 107.55,
+          "pqc_over_classical": 1.1564516129032258
+        }
+      }
+    },
+    {
+      "classical": "ECDSA-P256",
+      "pqc": "SLH_DSA_PURE_SHA2_128F",
+      "comparison_basis": "128-bit classical reference tier; distinct PQC categories retained",
+      "equivalent_quantum_security": false,
+      "operations": {
+        "keygen": {
+          "classical_us": 25.549999999999997,
+          "pqc_us": 1515.2,
+          "pqc_over_classical": 59.30332681017613
+        },
+        "sign": {
+          "classical_us": 44.65,
+          "pqc_us": 29467.85,
+          "pqc_over_classical": 659.9742441209406
+        },
+        "verify": {
+          "classical_us": 93.0,
+          "pqc_us": 1704.85,
+          "pqc_over_classical": 18.331720430107527
+        }
+      }
+    }
+  ],
+  "key_establishment": [
+    {
+      "algorithm": "ECDH-P256",
+      "classical_security_bits": 128,
+      "nist_pqc_category": null,
+      "verified": true,
+      "key_encoding": "DER SPKI / PKCS8 (unencrypted; size only)",
+      "public_key_bytes": 91,
+      "private_key_bytes": 138,
+      "signature_bytes": null,
+      "operations": {
+        "keygen": {
+          "samples": 30,
+          "median_us": 23.9,
+          "mean_us": 26.23,
+          "p95_us": 38.389999999999986,
+          "raw_ns": [
+            69500,
+            24700,
+            23500,
+            29700,
+            24900,
+            25000,
+            27000,
+            23900,
+            24500,
+            22800,
+            20500,
+            22600,
+            22100,
+            40100,
+            22500,
+            25300,
+            22700,
+            21300,
+            23300,
+            21600,
+            25300,
+            24700,
+            22100,
+            22600,
+            24000,
+            23400,
+            23000,
+            36300,
+            23900,
+            24100
+          ]
+        },
+        "exchange": {
+          "samples": 30,
+          "median_us": 75.30000000000001,
+          "mean_us": 76.16999999999999,
+          "p95_us": 82.67499999999998,
+          "raw_ns": [
+            83800,
+            74400,
+            76800,
+            74800,
+            81300,
+            75200,
+            75400,
+            75600,
+            73600,
+            72000,
+            76000,
+            73100,
+            93200,
+            74800,
+            72800,
+            75100,
+            73100,
+            75500,
+            77800,
+            76400,
+            77200,
+            73500,
+            72600,
+            74300,
+            72700,
+            76500,
+            76200,
+            76100,
+            74700,
+            80600
+          ]
+        }
+      }
+    },
+    {
+      "algorithm": "ML-KEM-512",
+      "verified": true,
+      "classical_security_bits": null,
+      "nist_pqc_category": 1,
+      "key_encoding": "raw liboqs",
+      "public_key_bytes": 800,
+      "private_key_bytes": 1632,
+      "ciphertext_bytes": 768,
+      "operations": {
+        "keygen": {
+          "samples": 30,
+          "median_us": 177.05,
+          "mean_us": 243.60666666666663,
+          "p95_us": 240.02999999999994,
+          "raw_ns": [
+            218800,
+            168500,
+            169100,
+            186700,
+            164100,
+            164300,
+            229800,
+            187700,
+            176800,
+            248400,
+            187100,
+            211200,
+            164900,
+            179700,
+            226900,
+            2032100,
+            182400,
+            132600,
+            155400,
+            170800,
+            160000,
+            193000,
+            166700,
+            170100,
+            177200,
+            176900,
+            164400,
+            196300,
+            166900,
+            179400
+          ]
+        },
+        "encapsulate": {
+          "samples": 30,
+          "median_us": 176.25,
+          "mean_us": 188.44666666666666,
+          "p95_us": 271.3799999999999,
+          "raw_ns": [
+            188400,
+            176000,
+            177500,
+            166600,
+            171900,
+            250700,
+            210100,
+            176500,
+            175100,
+            195400,
+            174000,
+            179300,
+            180100,
+            288300,
+            195600,
+            341700,
+            164600,
+            122200,
+            163000,
+            166100,
+            184300,
+            173200,
+            164100,
+            174300,
+            177200,
+            171000,
+            168500,
+            217000,
+            185400,
+            175300
+          ]
+        },
+        "decapsulate": {
+          "samples": 30,
+          "median_us": 42.85,
+          "mean_us": 44.283333333333324,
+          "p95_us": 58.164999999999985,
+          "raw_ns": [
+            45300,
+            40800,
+            41000,
+            48400,
+            42000,
+            46200,
+            61000,
+            42000,
+            54700,
+            43100,
+            67900,
+            42600,
+            43100,
+            48500,
+            47700,
+            43800,
+            34200,
+            26300,
+            40600,
+            40900,
+            43900,
+            40800,
+            41500,
+            46400,
+            42300,
+            45600,
+            40900,
+            43800,
+            41400,
+            41800
+          ]
+        }
+      }
+    }
+  ],
+  "unavailable": [],
+  "references": {
+    "classical": "https://nvlpubs.nist.gov/nistpubs/specialpublications/nist.sp.800-57pt1r5.pdf",
+    "categories": "https://csrc.nist.gov/Projects/Post-Quantum-Cryptography/Post-Quantum-Cryptography-Standardization/Evaluation-Criteria/Security-(Evaluation-Criteria)",
+    "faq": "https://csrc.nist.gov/projects/post-quantum-cryptography/faqs"
+  },
+  "limitations": [
+    "RSA and ECC are not quantum resistant. No parameter size gives them PQC-equivalent quantum security.",
+    "Categories 1 and 2 have different reference problems; a shared classical reference tier does not make them the same category.",
+    "ECDH exchange and KEM encapsulation/decapsulation have different roles and security definitions; no cross-operation speedup is calculated.",
+    "Classical keys use DER and PQC keys use raw encoding. Serialized sizes include different overheads.",
+    "Single-machine timings include Python/FFI overhead and are not a statistical performance study."
+  ]
+}

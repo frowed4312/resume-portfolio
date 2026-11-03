@@ -1,0 +1,123 @@
+{
+  "model": "qwen3:1.7b",
+  "embedding_model": "all-minilm",
+  "cpu_generation": true,
+  "scope": "Three smoke tasks on one short English note. Automated checks do not prove factual correctness.",
+  "results": [
+    {
+      "case": "explain",
+      "task": "Explain precision and recall using the notes. Cite the source.",
+      "checks": {
+        "retrieved_evidence": true,
+        "mentions_source": true,
+        "mentions_metric": true
+      },
+      "passed": true,
+      "state": {
+        "id": "ea68f84fcb6741a78bb0b9e00d4943ca",
+        "mode": "ollama",
+        "status": "completed",
+        "trace": [
+          {
+            "tool": "search_notes",
+            "result": [
+              {
+                "source": "metrics.md",
+                "chunk": 0,
+                "score": 0.6708061695098877,
+                "text": "Precision is TP/(TP+FP), the fraction of alerts that are true anomalies. Recall is TP/(TP+FN), the fraction of actual anomalies detected. Low recall means more missed anomalies."
+              }
+            ]
+          }
+        ],
+        "plan": [
+          "1. Identify the key concepts: precision and recall.",
+          "2. Retrieve notes on precision and recall from the notes.",
+          "3. Extract the definitions and sources from the notes.",
+          "4. Synthesize the information into a coherent explanation with a cited source."
+        ],
+        "answer": "Based on the retrieved notes:\n\n**Precision** is defined as the ratio of true positive (TP) results to the total number of positive predictions (TP + FP). It measures the accuracy of a test in identifying positive cases.\n\n**Recall** is defined as the ratio of true positive (TP) results to the total number of actual positive cases (TP + FN). It measures the ability of a test to find all positive cases.\n\nThe source for this information is:  \n**\"metrics.md\"** (chunk 0, score 0.6708).\n\nThis explanation is based on the provided notes and does not include external sources."
+      },
+      "elapsed_seconds": 7.441
+    },
+    {
+      "case": "report",
+      "task": "Search the notes and save a report named metrics.md explaining precision and recall. Cite the source.",
+      "checks": {
+        "retrieved_evidence": true,
+        "mentions_source": true,
+        "mentions_metric": true,
+        "report_saved": true,
+        "report_cites_source": true
+      },
+      "passed": true,
+      "state": {
+        "id": "619d1b38846e466baa5d4fe7589a4a6f",
+        "mode": "ollama",
+        "status": "completed",
+        "trace": [
+          {
+            "tool": "search_notes",
+            "result": [
+              {
+                "source": "metrics.md",
+                "chunk": 0,
+                "score": 0.6708061695098877,
+                "text": "Precision is TP/(TP+FP), the fraction of alerts that are true anomalies. Recall is TP/(TP+FN), the fraction of actual anomalies detected. Low recall means more missed anomalies."
+              }
+            ]
+          },
+          {
+            "tool": "write_report",
+            "result": {
+              "saved": "metrics.md"
+            }
+          }
+        ],
+        "plan": [
+          "Search the notes for information on precision and recall",
+          "Identify the relevant section in 'metrics.md' that defines precision and recall",
+          "Extract the definitions and ensure proper citation of the source",
+          "Generate a report titled 'metrics.md' explaining precision and recall with the cited source"
+        ],
+        "answer": "The report titled `metrics.md` has been successfully saved. It explains precision and recall with their respective formulas and mentions the source. The report is based on the information retrieved from the notes."
+      },
+      "elapsed_seconds": 9.116
+    },
+    {
+      "case": "followup",
+      "task": "Which metric from our earlier discussion measures missed anomalies? Search the notes and cite the source.",
+      "checks": {
+        "retrieved_evidence": true,
+        "mentions_source": true,
+        "mentions_metric": true
+      },
+      "passed": true,
+      "state": {
+        "id": "9113b832483d4a59a8946206f4eb07e9",
+        "mode": "ollama",
+        "status": "completed",
+        "trace": [
+          {
+            "tool": "search_notes",
+            "result": [
+              {
+                "source": "metrics.md",
+                "chunk": 0,
+                "score": 0.32825571298599243,
+                "text": "Precision is TP/(TP+FP), the fraction of alerts that are true anomalies. Recall is TP/(TP+FN), the fraction of actual anomalies detected. Low recall means more missed anomalies."
+              }
+            ]
+          }
+        ],
+        "plan": [
+          "Search the notes for information about the metric that measures missed anomalies.",
+          "Identify the metric from the notes that measures missed anomalies.",
+          "Cite the source of the information."
+        ],
+        "answer": "The metric that measures missed anomalies is **recall**. Recall is defined as the ratio of true positive (TP) results to the total number of actual positive cases (TP + FN). It measures the ability of a test to find all positive cases.\n\nThe source for this information is:  \n**\"metrics.md\"** (chunk 0, score 0.32825571298599243).\n\nThis explanation is based on the information retrieved from the notes."
+      },
+      "elapsed_seconds": 10.174
+    }
+  ]
+}

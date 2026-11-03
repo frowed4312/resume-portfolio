@@ -1,0 +1,20 @@
+{
+  "number": 15,
+  "base": 2,
+  "factors": [
+    3,
+    5
+  ],
+  "order_candidate": 4,
+  "method": "Qiskit statevector phase estimation",
+  "qubits": 12,
+  "shots": 512,
+  "seed": 42,
+  "counts": {
+    "0": 134,
+    "64": 119,
+    "128": 130,
+    "192": 129
+  },
+  "status": "factored"
+}

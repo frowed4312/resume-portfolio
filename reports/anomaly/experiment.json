@@ -1,0 +1,11 @@
+{
+  "seed": 42,
+  "source": "synthetic sensor spikes",
+  "split_rows": [
+    1440,
+    480,
+    480
+  ],
+  "training": "normal labeled rows only",
+  "selection": "validation F1; no test-based tuning"
+}

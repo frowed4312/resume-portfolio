@@ -1,0 +1,12 @@
+[
+  {
+    "target": "127.0.0.1",
+    "resolved_ips": [
+      "127.0.0.1"
+    ],
+    "mode": "tcp",
+    "ports": [],
+    "status": "ok",
+    "osint": {}
+  }
+]

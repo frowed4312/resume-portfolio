@@ -1,0 +1,98 @@
+{
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.14",
+    "native_sha256": "3c1793ab35557fe5079e9def125c95675090a257ec469f9b025a946acb0f507a"
+  },
+  "workload": {
+    "targets": [
+      "127.0.0.1",
+      "localhost"
+    ],
+    "ports": [
+      9013,
+      9014,
+      9015,
+      9016,
+      9017,
+      9018,
+      9019,
+      9020
+    ],
+    "open_ports": [
+      9013,
+      9014,
+      9015,
+      9016
+    ],
+    "workers": 2,
+    "timeout_seconds": 0.1,
+    "rounds": 10,
+    "warmup_rounds": 1,
+    "order": "alternating backend order; end-to-end including DNS, subprocess startup and parsing"
+  },
+  "samples_ms": {
+    "tcp": [
+      1322.304699999222,
+      1282.480800000485,
+      1291.0402000015893,
+      1302.9848000005586,
+      1305.2824000005785,
+      1305.831699999544,
+      1283.294400000159,
+      1291.3139999982377,
+      1297.668799998064,
+      1319.952199999534
+    ],
+    "c": [
+      1326.3785000017378,
+      1357.4800999995205,
+      1353.9772000003722,
+      1333.1461000016134,
+      1342.9247999993095,
+      1375.7224999972095,
+      1302.4975000007544,
+      1337.26150000075,
+      1352.2498000020278,
+      1331.1886999981652
+    ]
+  },
+  "median_ms": {
+    "tcp": 1300.3267999993113,
+    "c": 1340.0931500000297
+  },
+  "correctness": "both backends matched all expected listening ports in every round",
+  "limitations": [
+    "loopback only",
+    "CPU frequency and background load uncontrolled",
+    "no significance test",
+    "Rust worker not exercised",
+    "live OSINT APIs not exercised"
+  ],
+  "nmap_version": "Nmap version 7.993 ( https://nmap.org )\nPlatform: i686-pc-windows-windows\nCompiled with: nmap-liblua-5.4.9 openssl-3.5.9 nmap-libssh2-1.11.1_NMAP1 nmap-libz-1.3.2 nmap-libpcre2-10.49 nmap-libdnet-1.18.2 ipv6\nCompiled without:\nAvailable nsock engines: iocp poll select\n",
+  "nmap": [
+    {
+      "target": "127.0.0.1",
+      "resolved_ips": [
+        "127.0.0.1"
+      ],
+      "mode": "nmap",
+      "ports": [
+        {
+          "port": 3244,
+          "protocol": "tcp",
+          "service": {
+            "name": "http",
+            "product": "BaseHTTPServer",
+            "version": "0.6",
+            "extrainfo": "Python 3.12.14",
+            "method": "probed",
+            "conf": "10"
+          },
+          "ip": "127.0.0.1"
+        }
+      ],
+      "status": "ok"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+cmake_minimum_required(VERSION 3.20)
+project(oqs_portfolio C)
+set(CMAKE_C_STANDARD 11)
+find_package(liboqs CONFIG REQUIRED)
+add_executable(oqs_bench bench.c)
+target_link_libraries(oqs_bench PRIVATE OQS::oqs)

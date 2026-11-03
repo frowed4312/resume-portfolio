@@ -1,0 +1,391 @@
+{
+  "environment": {
+    "platform": "Windows-11-10.0.26200-SP0",
+    "python": "3.12.14",
+    "openssl": "OpenSSL 4.0.3 29 Sep 2026",
+    "message_bytes": 312,
+    "warmup": 1,
+    "liboqs": "0.16.0"
+  },
+  "results": [
+    {
+      "algorithm": "RSA-PSS-3072",
+      "classical_security_bits": 128,
+      "nist_pqc_category": null,
+      "verified": true,
+      "key_encoding": "DER SPKI / PKCS8 (unencrypted; size only)",
+      "public_key_bytes": 422,
+      "private_key_bytes": 1792,
+      "signature_bytes": 384,
+      "operations": {
+        "keygen": {
+          "samples": 10,
+          "median_us": 112982.75,
+          "mean_us": 121549.63999999998,
+          "p95_us": 227182.69999999998,
+          "raw_ns": [
+            64690600,
+            89177300,
+            54350200,
+            218856800,
+            165734400,
+            136788200,
+            59589000,
+            233994800,
+            20017100,
+            172298000
+          ]
+        },
+        "sign": {
+          "samples": 10,
+          "median_us": 2120.8500000000004,
+          "mean_us": 2149.7200000000003,
+          "p95_us": 2318.97,
+          "raw_ns": [
+            2099400,
+            2082100,
+            2160800,
+            2069400,
+            2180700,
+            2089300,
+            2090500,
+            2432100,
+            2142300,
+            2150600
+          ]
+        },
+        "verify": {
+          "samples": 10,
+          "median_us": 67.25,
+          "mean_us": 74.56,
+          "p95_us": 99.80999999999999,
+          "raw_ns": [
+            63900,
+            68500,
+            66000,
+            62400,
+            90900,
+            64200,
+            62200,
+            107100,
+            88800,
+            71600
+          ]
+        }
+      }
+    },
+    {
+      "algorithm": "ECDSA-P256",
+      "classical_security_bits": 128,
+      "nist_pqc_category": null,
+      "verified": true,
+      "key_encoding": "DER SPKI / PKCS8 (unencrypted; size only)",
+      "public_key_bytes": 91,
+      "private_key_bytes": 138,
+      "signature_bytes": 71,
+      "operations": {
+        "keygen": {
+          "samples": 10,
+          "median_us": 13.8,
+          "mean_us": 14.3,
+          "p95_us": 16.679999999999996,
+          "raw_ns": [
+            18300,
+            14700,
+            13800,
+            13600,
+            13700,
+            13300,
+            14000,
+            14200,
+            13800,
+            13600
+          ]
+        },
+        "sign": {
+          "samples": 10,
+          "median_us": 26.2,
+          "mean_us": 26.74,
+          "p95_us": 29.514999999999993,
+          "raw_ns": [
+            31900,
+            26200,
+            26200,
+            25900,
+            26600,
+            26000,
+            26300,
+            26100,
+            26300,
+            25900
+          ]
+        },
+        "verify": {
+          "samples": 10,
+          "median_us": 61.55,
+          "mean_us": 61.67,
+          "p95_us": 62.31,
+          "raw_ns": [
+            62400,
+            61300,
+            61900,
+            61400,
+            61800,
+            61500,
+            62200,
+            61500,
+            61600,
+            61100
+          ]
+        }
+      }
+    },
+    {
+      "algorithm": "ECDH-P256",
+      "classical_security_bits": 128,
+      "nist_pqc_category": null,
+      "verified": true,
+      "key_encoding": "DER SPKI / PKCS8 (unencrypted; size only)",
+      "public_key_bytes": 91,
+      "private_key_bytes": 138,
+      "signature_bytes": null,
+      "operations": {
+        "keygen": {
+          "samples": 10,
+          "median_us": 13.350000000000001,
+          "mean_us": 13.540000000000001,
+          "p95_us": 14.854999999999999,
+          "raw_ns": [
+            15800,
+            13400,
+            12900,
+            13300,
+            13600,
+            13100,
+            13200,
+            13700,
+            13600,
+            12800
+          ]
+        },
+        "exchange": {
+          "samples": 10,
+          "median_us": 53.3,
+          "mean_us": 53.39999999999999,
+          "p95_us": 53.995,
+          "raw_ns": [
+            54400,
+            53200,
+            53400,
+            53300,
+            53500,
+            53200,
+            53400,
+            53300,
+            53000,
+            53300
+          ]
+        }
+      }
+    },
+    {
+      "algorithm": "ML-KEM-512",
+      "verified": true,
+      "classical_security_bits": null,
+      "nist_pqc_category": 1,
+      "key_encoding": "raw liboqs",
+      "public_key_bytes": 800,
+      "private_key_bytes": 1632,
+      "ciphertext_bytes": 768,
+      "operations": {
+        "keygen": {
+          "samples": 10,
+          "median_us": 112.05000000000001,
+          "mean_us": 125.83999999999999,
+          "p95_us": 192.60499999999988,
+          "raw_ns": [
+            138100,
+            115800,
+            123300,
+            114900,
+            108100,
+            102600,
+            237200,
+            109200,
+            104900,
+            104300
+          ]
+        },
+        "encapsulate": {
+          "samples": 10,
+          "median_us": 109.8,
+          "mean_us": 130.60999999999999,
+          "p95_us": 216.23499999999984,
+          "raw_ns": [
+            125100,
+            290800,
+            109300,
+            118800,
+            108200,
+            105300,
+            124500,
+            110300,
+            106500,
+            107300
+          ]
+        },
+        "decapsulate": {
+          "samples": 10,
+          "median_us": 25.799999999999997,
+          "mean_us": 26.27,
+          "p95_us": 28.689999999999994,
+          "raw_ns": [
+            26400,
+            30400,
+            25500,
+            26600,
+            25700,
+            24900,
+            26100,
+            25600,
+            25600,
+            25900
+          ]
+        }
+      }
+    },
+    {
+      "algorithm": "ML-DSA-44",
+      "verified": true,
+      "classical_security_bits": null,
+      "nist_pqc_category": 2,
+      "key_encoding": "raw liboqs",
+      "public_key_bytes": 1312,
+      "private_key_bytes": 2560,
+      "signature_bytes": 2420,
+      "operations": {
+        "keygen": {
+          "samples": 10,
+          "median_us": 154.89999999999998,
+          "mean_us": 185.12,
+          "p95_us": 323.54999999999995,
+          "raw_ns": [
+            152600,
+            157600,
+            145700,
+            287800,
+            145200,
+            144600,
+            352800,
+            161800,
+            145900,
+            157200
+          ]
+        },
+        "sign": {
+          "samples": 10,
+          "median_us": 234.95,
+          "mean_us": 292.48,
+          "p95_us": 489.15999999999985,
+          "raw_ns": [
+            341700,
+            205100,
+            232000,
+            317100,
+            552700,
+            411500,
+            228700,
+            203700,
+            194400,
+            237900
+          ]
+        },
+        "verify": {
+          "samples": 10,
+          "median_us": 66.6,
+          "mean_us": 66.78999999999999,
+          "p95_us": 69.075,
+          "raw_ns": [
+            69300,
+            67100,
+            65200,
+            66700,
+            66800,
+            65600,
+            68800,
+            65900,
+            66000,
+            66500
+          ]
+        }
+      }
+    },
+    {
+      "algorithm": "SLH_DSA_PURE_SHA2_128F",
+      "verified": true,
+      "classical_security_bits": null,
+      "nist_pqc_category": 1,
+      "key_encoding": "raw liboqs",
+      "public_key_bytes": 32,
+      "private_key_bytes": 64,
+      "signature_bytes": 17088,
+      "operations": {
+        "keygen": {
+          "samples": 10,
+          "median_us": 935.75,
+          "mean_us": 941.5600000000001,
+          "p95_us": 993.015,
+          "raw_ns": [
+            914400,
+            919400,
+            930000,
+            975800,
+            941500,
+            942400,
+            1007100,
+            888700,
+            923100,
+            973200
+          ]
+        },
+        "sign": {
+          "samples": 10,
+          "median_us": 17729.75,
+          "mean_us": 18328.269999999997,
+          "p95_us": 20540.434999999998,
+          "raw_ns": [
+            17636700,
+            17530800,
+            21711200,
+            17787200,
+            19109500,
+            17619300,
+            17580100,
+            17672300,
+            18322300,
+            18313300
+          ]
+        },
+        "verify": {
+          "samples": 10,
+          "median_us": 1082.1,
+          "mean_us": 1127.8200000000002,
+          "p95_us": 1352.885,
+          "raw_ns": [
+            1066400,
+            1261200,
+            1427900,
+            1076400,
+            1044900,
+            1047200,
+            1116100,
+            1096700,
+            1053600,
+            1087800
+          ]
+        }
+      }
+    }
+  ],
+  "unavailable": []
+}

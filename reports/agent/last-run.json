@@ -1,0 +1,30 @@
+{
+  "id": "620aed34a0f2406aa50bae3c7c33921e",
+  "mode": "demo",
+  "status": "completed",
+  "trace": [
+    {
+      "tool": "search_notes",
+      "result": [
+        {
+          "source": "anomaly.md",
+          "chunk": 0,
+          "score": 0.3230291475421026,
+          "text": "# Anomaly detection evaluation\n\nPrecision is the fraction of alerts that are true anomalies: TP/(TP+FP).\nRecall is the fraction of actual anomalies detected: TP/(TP+FN).\nF1 is the harmonic mean of precision and recall. Choose thresholds using validation data, then report metrics on an untouched test set.\nChronological splits help avoid training on future observations. Fit scaling only on training data.\n"
+        }
+      ]
+    },
+    {
+      "tool": "write_report",
+      "result": {
+        "saved": "report-620aed34a0f2406aa50bae3c7c33921e.md"
+      }
+    }
+  ],
+  "plan": [
+    "Retrieve relevant notes",
+    "Collect excerpts with sources",
+    "Save report"
+  ],
+  "answer": "Local deterministic demo (no LLM)\n\n[anomaly.md#0]\n# Anomaly detection evaluation\n\nPrecision is the fraction of alerts that are true anomalies: TP/(TP+FP).\nRecall is the fraction of actual anomalies detected: TP/(TP+FN).\nF1 is the harmonic mean of precision and recall. Choose thresholds using validation data, then report metrics on an untouched test set.\nChronological splits help avoid training on future observations. Fit scaling only on training data.\n"
+}

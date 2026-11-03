@@ -1,0 +1,32 @@
+{
+  "robust_z": {
+    "precision": 0.9800904977375565,
+    "recall": 0.9100840336134454,
+    "f1": 0.9437908496732026,
+    "roc_auc": 0.9785233762013092,
+    "threshold": 20.392822920720555,
+    "parameters": {
+      "feature_quantile": 0.9
+    }
+  },
+  "isolation_forest": {
+    "precision": 1.0,
+    "recall": 0.9067226890756303,
+    "f1": 0.9510797708241516,
+    "roc_auc": 0.9916198523608338,
+    "threshold": 0.6289741848628887,
+    "parameters": {
+      "max_samples": 256
+    }
+  },
+  "autoencoder": {
+    "precision": 0.9535864978902954,
+    "recall": 0.9495798319327731,
+    "f1": 0.9515789473684211,
+    "roc_auc": 0.9934337712985747,
+    "threshold": 0.7436892461776715,
+    "parameters": {
+      "bottleneck": 8
+    }
+  }
+}
